@@ -3,16 +3,32 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "mspOfferName": {
-            "value": "TBG Azure Services Plan"
+            "type": "string",
+            "metadata": {
+                "description": "Specify a unique name for your offer"
+            },
+            "defaultValue": "TBG Azure Services Plan"
         },
         "mspOfferDescription": {
-            "value": "Services Plan for your Azure Tenant"
+            "type": "string",
+            "metadata": {
+                "description": "Name of the Managed Service Provider offering"
+            },
+            "defaultValue": "Services Plan for your Azure Tenant"
         },
         "managedByTenantId": {
-            "value": "02dfafa5-55f0-4255-9b41-0b0b80966d65"
+            "type": "string",
+            "metadata": {
+                "description": "Specify the tenant id of the Managed Service Provider"
+            },
+            "defaultValue": "02dfafa5-55f0-4255-9b41-0b0b80966d65"
         },
         "authorizations": {
-            "value": [
+            "type": "array",
+            "metadata": {
+                "description": "Specify an array of objects, containing tuples of Azure Active Directory principalId, a Azure roleDefinitionId, and an optional principalIdDisplayName. The roleDefinition specified is granted to the principalId in the provider's Active Directory and the principalIdDisplayName is visible to customers."
+            },
+            "defaultValue": [
                 {
                     "principalId": "33ff2c8d-12f6-462b-8f75-9e2bedf379ad",
                     "principalIdDisplayName": "TBG Hosting User Admins",
